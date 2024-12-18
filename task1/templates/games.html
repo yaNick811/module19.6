@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список товаров</title>
+</head>
+<body>
+    <h1>Список товаров</h1>
+    <ul>
+        {% for game in games_list %}
+            <li>{{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }} <button>Купить</button></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Главная</a>
+</body>
+</html>
